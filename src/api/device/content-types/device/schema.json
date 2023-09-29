@@ -18,18 +18,8 @@
     "code": {
       "type": "string"
     },
-    "status": {
-      "type": "enumeration",
-      "enum": [
-        "Faulty",
-        "In Repair",
-        "In Use",
-        "Available",
-        "Inactive"
-      ]
-    },
-    "address": {
-      "type": "string"
+    "location": {
+      "type": "text"
     },
     "description": {
       "type": "richtext"
@@ -38,6 +28,35 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
+      "inversedBy": "devices"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "repair_requests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::repair-request.repair-request",
+      "mappedBy": "device"
+    },
+    "status": {
+      "type": "string"
+    },
+    "borrow_status": {
+      "type": "string"
+    },
+    "type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::type.type",
       "inversedBy": "devices"
     },
     "category": {

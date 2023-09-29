@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "repair_requests",
+  "info": {
+    "singularName": "repair-request",
+    "pluralName": "repair-requests",
+    "displayName": "RepairRequest",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "repair_requests"
+    },
+    "device": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::device.device",
+      "inversedBy": "repair_requests"
+    },
+    "description": {
+      "type": "text"
+    },
+    "location": {
+      "type": "text"
+    },
+    "staff": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "repair_staff"
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}

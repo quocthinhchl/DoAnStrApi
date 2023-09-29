@@ -23,21 +23,17 @@
       "relation": "oneToOne",
       "target": "api::device.device"
     },
-    "request_date": {
+    "borrow_date": {
       "type": "date"
     },
     "return_date": {
       "type": "date"
     },
+    "location": {
+      "type": "text"
+    },
     "status": {
-      "type": "enumeration",
-      "enum": [
-        "Approved",
-        "Pending",
-        "Rejected",
-        "Returned",
-        "Overdue"
-      ]
+      "type": "string"
     }
   }
 }

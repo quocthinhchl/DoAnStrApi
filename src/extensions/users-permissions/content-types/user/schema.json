@@ -103,6 +103,26 @@
       "relation": "oneToMany",
       "target": "api::borrow-request.borrow-request",
       "mappedBy": "user"
+    },
+    "repair_requests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::repair-request.repair-request",
+      "mappedBy": "user"
+    },
+    "repair_staff": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::repair-request.repair-request",
+      "mappedBy": "staff"
+    },
+    "position": {
+      "type": "enumeration",
+      "enum": [
+        "Giảng viên",
+        "Học sinh",
+        "Phòng ban"
+      ]
     }
   }
 }
