@@ -23,12 +23,6 @@
       "relation": "oneToMany",
       "target": "api::device.device",
       "mappedBy": "category"
-    },
-    "types": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::type.type",
-      "mappedBy": "category"
     }
   }
 }

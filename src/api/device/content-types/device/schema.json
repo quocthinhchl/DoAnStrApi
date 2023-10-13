@@ -53,12 +53,6 @@
     "borrow_status": {
       "type": "string"
     },
-    "type": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::type.type",
-      "inversedBy": "devices"
-    },
     "category": {
       "type": "relation",
       "relation": "manyToOne",
